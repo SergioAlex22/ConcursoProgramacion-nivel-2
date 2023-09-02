@@ -1,0 +1,25 @@
+using System;
+
+public class Kata
+{
+  public static int Find(int[] integers)
+  {
+    int conteoPares=0;
+    int numeroPar=0;
+    int numeroImpar=0;
+    for (int i=0; i<integers.Length;i++){
+      if(integers[i]%2== 0){
+        conteoPares++;
+        numeroPar=integers[i];
+      }else 
+        {
+        numeroImpar=integers[i];
+      }
+    }
+    if(conteoPares>1){
+      return numeroImpar;
+    } else{
+      return numeroPar;
+    }
+  }
+}
